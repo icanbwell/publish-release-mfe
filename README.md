@@ -6,7 +6,7 @@ This action is meant to be used in CD pipelines and publishes your package and c
 # Example usage
 
 ```
-uses: icanbwell/publish-mfe-release@1.0.0
+uses: icanbwell/publish-mfe-release@1.0.1
 with:
   registry-auth-token: ${{secrets.BWELL_DEV_PAT}}
   registry-scope: '@icanbwell'
