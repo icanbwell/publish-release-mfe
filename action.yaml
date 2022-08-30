@@ -7,6 +7,10 @@ inputs:
   scope:
     description: 'The scope to use with the package registry'
     required: false
+  version-prefix:
+    description: 'A prefix that will be prepended to the version.  E.g. in v1.0.0 the prefix is "v"'
+    required: false
+    default: ''
 runs:
   using: 'composite'
   steps:
@@ -24,6 +28,7 @@ runs:
       shell: bash
       env:
         NODE_AUTH_TOKEN: ${{ inputs.auth-token }}
+        PREFIX: ${{ inputs.version-prefix }}
     - id: release
       # this will only run if the PR has been merged and will not run if the PR was closed without being merged
       if: github.event.pull_request.merged == true
