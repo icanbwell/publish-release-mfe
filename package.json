@@ -1,0 +1,20 @@
+{
+  "name": "publish-release-mfe",
+  "version": "1.1.1",
+  "description": "This action is meant to be used in CD pipelines and publishes your package and creates a release in Github using the version number from `package.json`.",
+  "main": "index.js",
+  "repository": "git@github.com:icanbwell/publish-release-mfe.git",
+  "author": "Tommy Morgan <tommy@tommymorgan.com>",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "ncc build src/index.ts -o dist"
+  },
+  "dependencies": {
+    "@actions/core": "^1.9.1",
+    "@actions/exec": "^1.1.1",
+    "typescript": "^4.8.2"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.34.0"
+  }
+}
