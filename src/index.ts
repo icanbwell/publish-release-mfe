@@ -29,8 +29,13 @@ export async function run() {
   const prefix = core.getInput("version-prefix");
 
   // get the new version number
-  await exec.getExecOutput("ls");
-  // determine if the new version number is available
+  const {stdout: ls} = await exec.getExecOutput(
+    'ls',
+    [],
+    {ignoreReturnCode: true, silent: true}
+  );
+  console.log('ls', ls);
+// determine if the new version number is available
 
   // if it is not available
   // get the previous version number
