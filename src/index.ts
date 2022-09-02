@@ -45,3 +45,5 @@ export async function run() {
   // publish
   // release
 }
+
+run();

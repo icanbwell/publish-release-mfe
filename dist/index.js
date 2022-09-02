@@ -4191,6 +4191,7 @@ function run() {
         // release
     });
 }
+run();
 
 })();
 
