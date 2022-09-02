@@ -35,7 +35,14 @@ export async function run() {
     {ignoreReturnCode: true, silent: true}
   );
   console.log('ls', ls);
-// determine if the new version number is available
+
+  const {stdout: pwd} = await exec.getExecOutput(
+    'pwd',
+    [],
+    {ignoreReturnCode: true, silent: true}
+  );
+  console.log('pwd', pwd);
+  // determine if the new version number is available
 
   // if it is not available
   // get the previous version number
@@ -46,4 +53,4 @@ export async function run() {
   // release
 }
 
-run();
+run

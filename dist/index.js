@@ -4182,6 +4182,8 @@ function run() {
         // get the new version number
         const { stdout: ls } = yield _actions_exec__WEBPACK_IMPORTED_MODULE_1__.getExecOutput('ls', [], { ignoreReturnCode: true, silent: true });
         console.log('ls', ls);
+        const { stdout: pwd } = yield _actions_exec__WEBPACK_IMPORTED_MODULE_1__.getExecOutput('pwd', [], { ignoreReturnCode: true, silent: true });
+        console.log('pwd', pwd);
         // determine if the new version number is available
         // if it is not available
         // get the previous version number
@@ -4191,7 +4193,7 @@ function run() {
         // release
     });
 }
-run();
+run;
 
 })();
 
