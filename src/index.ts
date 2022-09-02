@@ -31,7 +31,7 @@ export async function run() {
   // get the new version number
   const {stdout: ls} = await exec.getExecOutput(
     'ls',
-    ['..'],
+    [],
     {ignoreReturnCode: true, silent: true}
   );
   console.log('ls', ls);
