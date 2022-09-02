@@ -28,7 +28,7 @@ import * as github from "@actions/github";
 
 export async function run() {
   const prefix = core.getInput("version-prefix");
-  const token = core.getInput('github-token');
+//   const token = core.getInput('github-token');
 //   const octokit = github.getOctokit(token);
 //   octokit.
 

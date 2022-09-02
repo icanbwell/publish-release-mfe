@@ -4179,7 +4179,7 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 function run() {
     return __awaiter(this, void 0, void 0, function* () {
         const prefix = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput("version-prefix");
-        const token = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput('github-token');
+        //   const token = core.getInput('github-token');
         //   const octokit = github.getOctokit(token);
         //   octokit.
         //   github.getOctokit
