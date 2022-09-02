@@ -13,4 +13,7 @@ inputs:
     default: ''
 runs:
   using: 'node16'
-  main: 'dist/index.js'
+  steps:
+  - uses: actions/checkout@v3
+  - main: 'dist/index.js'
+    id: js
