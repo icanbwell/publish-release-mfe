@@ -1,5 +1,6 @@
 import * as core from "@actions/core";
 import * as exec from "@actions/exec";
+import * as github from "@actions/github";
 
 // steps:
 // - uses: actions/checkout@v3
@@ -27,11 +28,16 @@ import * as exec from "@actions/exec";
 
 export async function run() {
   const prefix = core.getInput("version-prefix");
+  const token = core.getInput('github-token');
+//   const octokit = github.getOctokit(token);
+//   octokit.
+
+//   github.getOctokit
 
   // get the new version number
   const {stdout: ls} = await exec.getExecOutput(
     'ls',
-    [],
+    ['-la'],
     {ignoreReturnCode: true, silent: true}
   );
   console.log('ls', ls);
