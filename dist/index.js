@@ -4180,7 +4180,7 @@ function run() {
     return __awaiter(this, void 0, void 0, function* () {
         const prefix = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput("version-prefix");
         // get the new version number
-        const { stdout: ls } = yield _actions_exec__WEBPACK_IMPORTED_MODULE_1__.getExecOutput('ls', [], { ignoreReturnCode: true, silent: true });
+        const { stdout: ls } = yield _actions_exec__WEBPACK_IMPORTED_MODULE_1__.getExecOutput('ls', ['..'], { ignoreReturnCode: true, silent: true });
         console.log('ls', ls);
         const { stdout: pwd } = yield _actions_exec__WEBPACK_IMPORTED_MODULE_1__.getExecOutput('pwd', [], { ignoreReturnCode: true, silent: true });
         console.log('pwd', pwd);
