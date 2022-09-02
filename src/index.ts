@@ -53,4 +53,4 @@ export async function run() {
   // release
 }
 
-run
+run();

@@ -4193,7 +4193,7 @@ function run() {
         // release
     });
 }
-run;
+run();
 
 })();
 
