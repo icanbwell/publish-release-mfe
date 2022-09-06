@@ -3,7 +3,7 @@ import * as exec from '@actions/exec';
 import * as github from '@actions/github';
 
 const getClient = () => {
-  const token = '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'; // TODO: replace this with the appropriate environment variable
+  const token = core.getInput("github-token");
   return github.getOctokit(token);
 };
 

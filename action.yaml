@@ -1,7 +1,10 @@
 name: 'Validate NPM Package Version'
 description: 'Ensure that the package version you want to publish is available'
 inputs:
-  auth-token:
+  github-token:
+    description: 'The token used for auth with github'
+    required: true
+  package-token:
     description: 'The token used for auth with the package registry'
     required: true
   scope:
