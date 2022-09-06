@@ -75,19 +75,23 @@ export async function run() {
   const prefix = core.getInput('version-prefix') || 'v';
   //   const repo = core.getInput("repository"); // TODO: replace this with the appropriate environment variable
   //   const token = core.getInput("github-token"); // TODO: replace this with the appropriate environment variable
-  const octokit = getClient();
+  console.log(`TOMMY: prefix: ${prefix}`);
 
   // get the new version number
   let newVersion = await getVersion('TECHX-540');
+  console.log(`TOMMY: newVersion: ${newVersion}`);
 
   // determine if the new version number is available
   const tag = await queryTag(`${prefix}${newVersion}`);
+  console.log(`TOMMY: tag: ${tag}`);
 
   // if it is not available
   if (tag) {
     // get the previous version number
     const previousVersion = await getVersion('main');
+    console.log(`TOMMY: previousVersion: ${previousVersion}`);
     newVersion = calculateNextVersion(previousVersion, newVersion);
+    console.log(`TOMMY: newVersion: ${newVersion}`);
   }
 
   console.log(`The new version will be ${newVersion}`);
