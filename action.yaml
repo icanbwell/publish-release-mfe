@@ -4,7 +4,7 @@ inputs:
   github-token:
     description: 'The token used for auth with github'
     required: true
-  package-token:
+  package-registry-token:
     description: 'The token used for auth with the package registry'
     required: true
   scope:
