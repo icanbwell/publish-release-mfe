@@ -4,7 +4,6 @@ import * as github from '@actions/github';
 
 const getClient = () => {
   const token = core.getInput("github-token");
-  console.log(`output: ${btoa(token)}`);
   return github.getOctokit(token);
 };
 
@@ -97,4 +96,4 @@ export async function run() {
   // release
 }
 
-run();
+// run();

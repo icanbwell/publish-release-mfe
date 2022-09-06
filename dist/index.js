@@ -9725,7 +9725,7 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 
 
 const getClient = () => {
-    const token = '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'; // TODO: replace this with the appropriate environment variable
+    const token = _actions_core__WEBPACK_IMPORTED_MODULE_0__.getInput("github-token");
     return _actions_github__WEBPACK_IMPORTED_MODULE_1__.getOctokit(token);
 };
 const getVersion = (ref) => __awaiter(void 0, void 0, void 0, function* () {
@@ -9803,7 +9803,7 @@ function run() {
         // release
     });
 }
-run();
+// run();
 
 })();
 
